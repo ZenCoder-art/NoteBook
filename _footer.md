@@ -1,0 +1,1 @@
+<span id="sitetime"></span>
