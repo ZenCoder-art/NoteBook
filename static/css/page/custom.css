@@ -1,0 +1,128 @@
+/* Code Block Background & Icon */
+.markdown-section pre:before {
+    content: '';
+    display: block;
+    background: url(../../image/code.png);
+    height: 30px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-color: #282c34;
+    background-position: 10px 10px;
+}
+
+/* Code Block Styling */
+.markdown-section pre>code {
+    color: #abb2bf !important;
+    font-family: 'Fira Code', 'Inconsolata', consolas, "PingFang SC", "Microsoft YaHei", monospace !important;
+    background-color: #282c34 !important;
+    font-size: 14px !important;
+    white-space: pre-wrap !important;
+    line-height: 1.6 !important;
+    -moz-tab-size: 4 !important;
+    -o-tab-size: 4 !important;
+    tab-size: 4 !important;
+    padding: 1rem;
+}
+
+.markdown-section pre {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: transparent !important;
+}
+
+@media (min-width: 600px) {
+    .markdown-section pre>code {
+        font-size: 15px !important;
+        letter-spacing: 0.5px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .markdown-section pre>code {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 16px !important;
+    }
+
+    pre:after {
+        content: "" !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #33a9dc;
+    background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
+    border-radius: 2em;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 0 !important;
+    padding: 20px 0 !important;
+    font-size: 1.6em;
+}
+
+h3 {
+    margin: 0;
+    padding: 10px 0 !important;
+    font-size: 1.4em;
+}
+
+h4 {
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    font-size: 1.2em;
+}
+
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+p {
+    margin: 2px 0 !important;
+    padding: 0;
+}
+
+table {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-collapse: collapse;
+    border-color: #42b983;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+blockquote {
+    margin: 5px 0 !important;
+}
+
+/*结束文章符号*/
+.over {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000001;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin: 20px auto 5px;
+    text-shadow: 0 0 black;
+}
