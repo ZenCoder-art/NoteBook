@@ -9,40 +9,40 @@
   <meta name="keywords" content="数据库, MySQL, python,大数据">
   <meta name="author" content="zhouweinuo">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 站点基础样式 -->
   <link rel="icon" href="./favicon.png">
-  <!-- vue主题 -->
-  <link type="text/css" rel="stylesheet" href="./static/css/page/vue.css">
-  <link type="text/css" rel="stylesheet" href="./static/css/page/toc.css">
-  <!-- 导航栏 -->
-  <link type="text/css" rel="stylesheet" href="./static/css/page/nav.css">
-  <!-- 侧边栏 -->
-  <link type="text/css" rel="stylesheet" href="./static/css/page/sidebar.css">
-  <link type="text/css" rel="stylesheet" href="./static/css/page/custom.css">
-  <!-- 切换到深色模式 -->
-  <link type="text/css" rel="stylesheet" href="./static/css/plugins/dark_style.css">
-  <!-- 数学公式渲染样式 -->
-  <link type="text/css" rel="stylesheet" href="./static/css/plugins/katex.css">
-  <!-- 复制提醒 -->
-  <link type="text/css" rel="stylesheet" href="./static/css/plugins/sweetalert.css" media="all">
-  <link type="text/css" rel="stylesheet" href="./static/css/plugins/font-awesome.css">
-  <!-- 音乐播放器 -->
-  <link type="text/css" rel="stylesheet" href="./static/css/plugins/APlayer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link type="text/css" rel="stylesheet" href="./static/css/page/vue.css"> <!-- Vue主题 -->
+  <link type="text/css" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome 图标库 -->
+
+  <!-- 页面布局样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/page/toc.css"> <!-- 目录样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/page/nav.css"> <!-- 导航栏样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/page/sidebar.css"> <!-- 侧边栏样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/page/custom.css"> <!-- 自定义样式 -->
+
+  <!-- 插件和功能样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/plugins/dark_style.css"> <!-- 深色模式样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/plugins/katex.css"> <!-- 数学公式样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/plugins/sweetalert.css" media="all"> <!-- 复制提醒样式 -->
+  <link type="text/css" rel="stylesheet" href="./static/css/plugins/font-awesome.css"> <!-- Font Awesome 图标 -->
+
+  <!-- 音乐播放器（可选） -->
+  <!-- <link type="text/css" rel="stylesheet" href="./static/css/plugins/APlayer.css"> -->
 
 </head>
 
 <body>
   <div id="app"></div>
+  <!-- Docsify 初始化配置 -->
   <script>
     window.$docsify = {
       name: "NoteBook", // 指定文档的标题
       nameLink: "/", // 点击文档标题跳转的链接
-      // repo: "/",
       loadSidebar: true, // 加载_sidebar.md文件作为侧边栏
       loadNavbar: true, // 加载_navbar.md文件作为导航栏
       MaxLevel: 6, // 最大标题
       sidebarDisplayLevel: 2, // 侧边栏展示的目录级数
-      // 全局使用一个侧边栏，不需要为子目录指定侧边栏
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
@@ -50,17 +50,13 @@
       coverpage: true, // 加载_coverpage.md作为封面
       onlyCover: false, // 封面是否作为单独的组件出现
       auto2top: true, // 页面改变时自动到顶部
-      basePath: '/', // 网站的根目录，可以指定域名
+      basePath: '/', // 网站的根目录
       relativePath: true, // 开启相对路径
       executeScript: true, // 执行外联
       externalLinkTarget: '_blank', // 在新窗口打开链接
       notFoundPage: true, // 加载_404.md
       topMargin: 90, // 滚动到锚点是与顶部的距离
-      notFoundPage: true, // 加载_404.md作为错误页面
-      // 下面开始定义插件功能
-      // 1. 开启网站统计
-      busuanzi: true,
-      // 2. 开始全局搜索功能
+      busuanzi: true, // 开启网站统计
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: "auto",
@@ -70,15 +66,13 @@
         hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
         namespace: "blog-website"
       },
-      // 3. 开启tab选项卡功能
       tabs: {
-        persist: true, // default
-        sync: true, // default
-        theme: 'classic', // default
-        tabComments: true, // default
-        tabHeadings: true // default
+        persist: true, // 默认开启
+        sync: true, // 默认开启
+        theme: 'classic', // 默认主题
+        tabComments: true, // 默认开启
+        tabHeadings: true // 默认开启
       },
-      // 4. 开启字数统计插件
       count: {
         countable: true,
         position: 'top',
@@ -93,18 +87,15 @@
         },
         isExpected: true,
       },
-      // 5. 分页导航插件
       pagination: {
         previousText: 'Privious',
         nextText: 'Next',
         crossChapter: true,
         crossChapterText: true
       },
-      // 6. 支持mermaid插件
       mermaidConfig: {
         querySelector: ".mermaid"
       },
-      // 7. 音乐播放器插件
       MetingAPI: {
         elementId: 'meting',
         api: 'https://api.i-meto.com/meting/api',
@@ -121,26 +112,22 @@
           { server: 'netease', type: 'playlist', id: '7383516738' }, // 网易云播放列表3
         ],
       },
-      // 8. 权限认证插件
       auth: {
         enable: true, // 是否开启
         use: "sha256", // 使用sha256加密算法
         password: "4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2", // md5密码
         title: "请输入密码以访问文档：", // 设置标题
-        paths: ["/test"] // 需要认证的路径，支持正则表达式匹配
+        paths: ["/password/"] // 需要认证的路径，支持正则表达式匹配
       },
-      // 9. 目录插件
       toc: {
         scope: '.markdown-section',
         headings: 'h1, h2',
         title: '目录',
       },
-      // 10. 隐藏长代码
       hideCode: {
         scroll: false,
         height: 600
       },
-      // 11. 页脚
       footer: {
         copy: '<div class = "over" >完结</div><br/><span>我能想到最浪漫的事，就是我喝咖啡你付钱~😆😏 ❤️ 打赏地址：<a href="https://pay.imdnspod.top/" target="_blank">https://pay.imdnspod.top/</a></span><iframe src="https://pay.imdnspod.top/" style="overflow-x:hidden;overflow-y:hidden; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe><br/><span id="sitetime"></span><br/><span>Copyright &copy; 2024</span>',
         auth: '',
@@ -149,71 +136,58 @@
       },
     }
   </script>
-  <!-- docsify依赖项 -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <!-- 全文搜索插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
-  <script type="text/javascript"
-    src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- 代码高亮 -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.js"></script>
-  <!-- 执行外联js脚本 -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  <!-- 图片缩放插件 -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- 复制代码块 -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 分页导航 -->
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- 字数统计 -->
-  <script type="text/javascript" src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  <!-- tab选项卡 -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-  <!-- 复制提醒 -->
-  <script type="text/javascript" src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
-  <!-- 自动添加空格 -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
-  <!-- 长代码进行隐藏 -->
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/docsify-hide-code/dist/docsify-hide-code.min.js"></script>
-  <!-- 数学公式渲染 -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/marked@4"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  <!-- 切换深色模式 -->
-  <script src="//cdn.jsdelivr.net/gh/LIGMATV/docsify-dark-switcher@latest/docsify-dark-switcher.js"></script>
-  <!-- 支持mermaid -->
+
+  <!-- 引入 Docsify 核心文件 -->
+  <script type="text/javascript" src="./static/js/plugins/docsify.min.js"></script> <!-- Docsify 核心 -->
+  <script type="text/javascript" src="./static/js/plugins/sidebar-collapse.min.js"></script> <!-- 侧边栏插件 -->
+  <script type="text/javascript" src="./static/js/plugins/external-script.min.js"></script> <!-- 执行外联 js 脚本 -->
+  <script type="text/javascript" src="./static/js/plugins/zoom-image.min.js"></script> <!-- 图片缩放插件 -->
+  <script type="text/javascript" src="./static/js/plugins/copy-code.min.js"></script> <!-- 复制代码插件 -->
+
+  <!-- 代码高亮、数学公式及 mermaid 插件 -->
+  <script type="text/javascript" src="./static/js/plugins/prism-python.js"></script> <!-- Python 代码高亮 -->
+  <script type="text/javascript" src="./static/js/base/katex.min.js"></script> <!-- 数学公式插件 -->
+  <script type="text/javascript" src="/./static/js/plugins/docsify-katex.js"></script> <!-- Docsify 数学公式插件 -->
+
+  <!-- mermaid 图表支持 -->
   <script type="module">
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ startOnLoad: true });
     window.mermaid = mermaid;
   </script>
-  <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
-  <!-- fontawesome图标 -->
-  <script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
-  <!-- meting api -->
-  <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="//unpkg.com/docsify-plugin-meting-api/dist/docsify-plugin-meting-api.min.js"></script>
-  <!-- 支持脚注 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-footnote/dist/docsify-footnote.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@v4/lib/plugins/front-matter.min.js"></script>
-  <!-- 权限认证 -->
-  <script src="https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/build/sha256.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-auth@1.2.0/dist/docsify-auth.min.js"></script>
-  <!-- 图片标题 -->
-  <script src="https://unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
+  <script type="text/javascript" src="./static/js/plugins/docsify-mermaid.js"></script> <!-- mermaid 渲染支持 -->
 
-  <!-- 自定义js脚本 -->
-  <script type="text/javascript" src="./static/js/copymessage.js"></script>
-  <script type="text/javascript" src="./static/js/clicktoTop.js"></script>
-  <script type="text/javascript" src="./static/js/clicktoTopPostition.js"></script>
-  <script type="text/javascript" src="./static/js/heart.js"></script>
-  <script type="text/javascript" src="./static/js/busuanzi.js"></script>
-  <script type="text/javascript" src="./static/js/runtime.js"></script>
-  <script type="text/javascript" src="./static/js/footer.js"></script>
+  <!-- 图片标题插件 -->
+  <script type="text/javascript" src="./static/js/plugins/docsify-image-caption.min.js"></script>
+
+  <!-- 权限认证插件 -->
+  <script type="text/javascript" src="./static/js/base/sha256.min.js"></script>
+  <script type="text/javascript" src="./static/js/plugins/docsify-auth.min.js"></script>
+
+  <!-- 全文搜索插件 -->
+  <script type="text/javascript" src="./static/js/plugins/search.min.js"></script> <!-- 搜索插件 -->
+  <script type="text/javascript" src="./static/js/plugins/toc.js"></script> <!-- 目录插件 -->
+
+  <!-- 字数统计插件 -->
+  <script type="text/javascript" src="./static/js/plugins/countable.js"></script>
+
+  <!-- 分页导航插件 -->
+  <script type="text/javascript" src="./static/js/plugins/pagination.min.js"></script>
+
+  <!-- tab选项卡插件 -->
+  <script type="text/javascript" src="./static/js/plugins/tabs.js"></script>
+  <script type="text/javascript" src="./static/js/plugins/dark-switcher.js"></script>
+
+  <!-- 自定义脚本 -->
+  <script type="text/javascript" src="./static/js/base/fontawesome.min.js"></script> <!-- FontAwesome 图标 -->
+  <script type="text/javascript" src="./static/js/plugins/busuanzi.js"></script> <!-- 网站统计插件 -->
+  <script type="text/javascript" src="./static/js/base/card.js"></script> <!-- 自定义卡片样式插件 -->
+  <script type="text/javascript" src="./static/js/base/runtime.js"></script> <!-- 运行时 -->
+  <script type="text/javascript" src="./static/js/plugins/footer.js"></script> <!-- 页脚插件 -->
+  <script type="text/javascript" src="./static/js/base/clicktoTop.js"></script> <!-- 返回顶部 -->
+  <script type="text/javascript" src="./static/js/base/clicktoTopPostition.js"></script> <!-- 顶部位置 -->
+  <script type="text/javascript" src="./static/js/base/heart.js"></script> <!-- 心动特效 -->
+  <script type="text/javascript" src="./static/js/base/copymessage.js"></script> <!-- 复制消息提示 -->
 </body>
 
 </html>
