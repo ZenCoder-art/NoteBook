@@ -1,6 +1,6 @@
 .app-nav {
     position: fixed;
-    background-color: var(--theme-color, #42b983);
+    background-color: #98FF98;
     width: 100%;
     margin: 0;
     margin-right: 0 !important;
@@ -9,8 +9,10 @@
     transition: 0.2s;
 }
 
-.app-nav li {
+.app-nav li,
+.app-nav p {
     padding: 0;
+    color: #333333;
 }
 
 .app-nav p img:nth-child(1) {
@@ -25,7 +27,7 @@
 }
 
 .app-nav li ul {
-    color: #000000;
+    color: #333333;
 }
 
 .app-nav .badge {
